@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { display: flex; background-color: #f4f6f9; min-height: 100vh; }
+        
+        /* Sidebar Styling */
+        .sidebar { width: 250px; background-color: #1e1e2f; color: white; padding: 20px; }
+        .sidebar h2 { text-align: center; margin-bottom: 30px; color: #ff4757; }
+        .sidebar ul { list-style: none; }
+        .sidebar ul li { padding: 15px; margin-bottom: 10px; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+        .sidebar ul li:hover, .sidebar ul li.active { background-color: #ff4757; }
+
+        /* Main Content Styling */
+        .main-content { flex: 1; padding: 30px; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+        
+        /* Cards Styling */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-left: 5px solid #ff4757; }
+        .card h3 { color: #888; font-size: 0.9rem; margin-bottom: 10px; }
+        .card p { font-size: 1.8rem; font-weight: bold; color: #333; }
+
+        /* Table Styling */
+        .recent-orders { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .recent-orders h2 { margin-bottom: 20px; font-size: 1.2rem; color: #333; }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th, td { padding: 12px 15px; border-bottom: 1px solid #eee; }
+        th { background-color: #f8f9fa; color: #666; }
+        .status { padding: 5px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; }
+        .status.delivered { background-color: #d4edda; color: #155724; }
+        .status.pending { background-color: #fff3cd; color: #856404; }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>My Shop</h2>
+        <ul>
+            <li class="active">📊 Dashboard</li>
+            <li>📦 ပစ္စည်းများ (Products)</li>
+            <li>🛒 အော်ဒါများ (Orders)</li>
+            <li>👥 ဝယ်သူများ (Customers)</li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>ပင်မစာမျက်နှာ (Dashboard)</h1>
+            <div>အကောင့်: Admin 😎</div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>ယနေ့ရောင်းရငွေ</h3>
+                <p>၁၅၀,၀၀၀ ကျပ်</p>
+            </div>
+            <div class="card">
+                <h3>အော်ဒါအသစ်</h3>
+                <p>၁၂ ခု</p>
+            </div>
+            <div class="card">
+                <h3>ပစ္စည်းလက်ကျန်</h3>
+                <p>၄၅ မျိုး</p>
+            </div>
+        </div>
+
+        <div class="recent-orders">
+            <h2>လတ်တလော အော်ဒါစာရင်း</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>အော်ဒါ ID</th>
+                        <th>ဝယ်သူအမည်</th>
+                        <th>ပစ္စည်းအမျိုးအမည်</th>
+                        <th>ကျသင့်ငွေ</th>
+                        <th>အခြေအနေ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1001</td>
+                        <td>ကိုမင်းခန့်</td>
+                        <td>ကျောပိုးအိတ် (Black)</td>
+                        <td>၂၅,၀၀၀ ကျပ်</td>
+                        <td><span class="status delivered">ပို့ဆောင်ပြီး</span></td>
+                    </tr>
+                    <tr>
+                        <td>#1002</td>
+                        <td>မစုစု</td>
+                        <td>T-Shirt (White)</td>
+                        <td>၁၅,၀၀၀ ကျပ်</td>
+                        <td><span class="status pending">စောင့်ဆိုင်းဆဲ</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
